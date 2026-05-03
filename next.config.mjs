@@ -18,10 +18,10 @@ const nextConfig = {
           {
             type: 'header',
             key: 'host',
-            value: 'thegeniuschessacademy.com',  // Your non-www domain
+            value: 'guruchessacademy.com',  // Your non-www domain
           },
         ],
-        destination: 'https://www.thegeniuschessacademy.com/:path*',
+        destination: 'https://www.guruchessacademy.com/:path*',
         permanent: true,
       },
     ];

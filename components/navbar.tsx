@@ -6,17 +6,21 @@ import { Menu, X } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence, Variants } from "framer-motion"
+import { BookDemoModal } from "./bookdemo" // Ensure path is correct
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false) // Added state
   const pathname = usePathname()
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/programs", label: "Programs" },
+    { href: "/about", label: "About" },
+    { href: "/courses", label: "Courses" },
+    { href: "/coaches", label: "Coaches" },
+    { href: "/achievements", label: "Achievements" },
     { href: "/gallery", label: "Gallery" },
-    { href: "/success-stories", label: "Success Stories" },
+    { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact Us" },
   ]
 
@@ -46,48 +50,43 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-16 sm:h-20 ">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 ">
-              <div className="relative flex items-center rounded-4xl overflow-hidden">
-  <img
-    src="/logo.jpg"
-    alt="Genius Chess Academy Logo"
-    className="h-15 sm:h-15 w-auto object-contain rounded-2xl"
-  />
-</div>
-
+      <nav className="fixed top-0 left-0 right-0 bg-white border-b border-gray-100 z-[100] shadow-sm">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20">
+            
+            {/* Logo Section */}
+            <Link href="/" className="flex items-center space-x-3 shrink-0">
+              <img
+                src="/guru-logo.jpeg"
+                alt="Logo"
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
               <div className="flex flex-col justify-center">
-                {/* THIS IS THE CORRECTED LINE */}
-                <h1 className="text-xl sm:text-2xl font-black tracking-tight leading-tight whitespace-nowrap">
-                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                    GENIUS
-                  </span>
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent ml-1 sm:ml-2">CHESS</span>
+                <h1 className="text-lg sm:text-xl font-black tracking-tight leading-tight whitespace-nowrap">
+                  <span className="text-[#2B5292]">GURU</span>
+                  <span className="text-[#333333] ml-2">CHESS ACADEMY</span>
                 </h1>
-                <p className="hidden sm:block text-[10px] text-gray-900 tracking-widest font-medium leading-tight mt-0.5">
-                  Academy & International School of Chess
+                <p className="hidden sm:block text-[8px] text-gray-400 tracking-[0.2em] font-bold uppercase leading-tight mt-0.5">
+                  International School of Chess
                 </p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
+            <div className="hidden lg:flex items-center space-x-5 xl:space-x-8">
               {navItems.map((item) => {
                 const isActive = pathname === item.href
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`font-semibold transition-all duration-300 relative group ${
-                      isActive ? "text-purple-600" : "text-gray-700 hover:text-purple-600"
+                    className={`font-bold text-[12px] uppercase tracking-wider whitespace-nowrap transition-all duration-300 relative group ${
+                      isActive ? "text-[#2B5292]" : "text-gray-600 hover:text-[#2B5292]"
                     }`}
                   >
                     {item.label}
                     <span
-                      className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 transition-all duration-300 ${
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-[#C2410C] transition-all duration-300 ${
                         isActive ? "w-full" : "w-0 group-hover:w-full"
                       }`}
                     ></span>
@@ -96,28 +95,30 @@ export function Navbar() {
               })}
             </div>
 
-            {/* Desktop CTA Button */}
-            <div className="hidden lg:block">
-              <Link href="/book-demo">
-                <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-6 py-2 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                  Book FREE Demo
-                </Button>
-              </Link>
+            {/* Desktop CTA Button - Now triggers Modal */}
+            <div className="hidden lg:block shrink-0">
+              <Button 
+                onClick={() => setIsDemoModalOpen(true)}
+                className="bg-[#C2410C] hover:bg-[#A34F26] text-white font-bold px-6 py-5 rounded-md shadow-md text-xs tracking-widest transition-all active:scale-95"
+              >
+                BOOK A FREE DEMO
+              </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-gray-700 hover:text-purple-600 transition-colors z-50 relative"
-                aria-label="Toggle menu"
+                className="p-2 text-[#2B5292] z-50 relative"
               >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
             </div>
           </div>
         </div>
       </nav>
+
+      <div className="h-16 sm:h-20"></div>
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
@@ -127,9 +128,9 @@ export function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="lg:hidden fixed inset-0 bg-white/95 backdrop-blur-md z-40"
+            className="lg:hidden fixed inset-0 bg-white z-[90] overflow-hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full space-y-8 pt-20">
+            <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
               {navItems.map((item) => {
                  const isActive = pathname === item.href
                  return (
@@ -137,28 +138,36 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className={`font-semibold text-2xl transition-colors ${
-                      isActive ? "text-purple-600" : "text-gray-700 hover:text-purple-600"
+                    className={`font-black text-2xl uppercase tracking-tighter ${
+                      isActive ? "text-[#C2410C]" : "text-[#2B5292]"
                     }`}
                   >
                     {item.label}
                   </Link>
                  )
               })}
-              <div className="pt-8">
-                <Link href="/book-demo">
-                  <Button
-                    onClick={() => setIsOpen(false)}
-                    className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-3 px-8 text-lg rounded-full"
-                  >
-                    Book FREE Demo Class
-                  </Button>
-                </Link>
+              <div className="pt-4 w-full">
+                {/* Mobile CTA - Now triggers Modal */}
+                <Button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsDemoModalOpen(true);
+                  }}
+                  className="w-full bg-[#C2410C] text-white font-bold py-7 text-lg rounded-2xl"
+                >
+                  BOOK FREE DEMO
+                </Button>
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* The Modal Component */}
+      <BookDemoModal 
+        isOpen={isDemoModalOpen} 
+        onClose={() => setIsDemoModalOpen(false)} 
+      />
     </>
   )
 }

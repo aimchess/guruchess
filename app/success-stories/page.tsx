@@ -19,7 +19,7 @@ export default function SuccessStoriesPage() {
   rating: "ELO 2229",
   timeframe: "3 years",
   story:
-    "Fide Master Madhvendra Pratap Sharma (ELO 2229) is a shining talent from Genius Chess Academy who has achieved outstanding success on the world stage. He made India proud by securing Gold Medals at both the Asian Youth Chess Championship 2025 (Thailand) and the Commonwealth Chess Championship. Previously, he dominated the 2022 Asian Youth Championship in Indonesia, becoming champion in all three formats (Rapid, Blitz, Classical), and won National Championships in 2022 (Indore) and 2024 (Hyderabad). His vision is to become a Grandmaster, and his journey is an inspiration for chess learners everywhere.",
+    "Fide Master Madhvendra Pratap Sharma (ELO 2229) is a shining talent from Guru Chess Academy who has achieved outstanding success on the world stage. He made India proud by securing Gold Medals at both the Asian Youth Chess Championship 2025 (Thailand) and the Commonwealth Chess Championship. Previously, he dominated the 2022 Asian Youth Championship in Indonesia, becoming champion in all three formats (Rapid, Blitz, Classical), and won National Championships in 2022 (Indore) and 2024 (Hyderabad). His vision is to become a Grandmaster, and his journey is an inspiration for chess learners everywhere.",
   quote: "I love how chess makes me think differently about problems. Representing India and winning Gold is just the beginning!",
   badges: ["Asian Games Gold", "Commonwealth Gold", "National Champion"],
   program: "Grandmaster Path",
@@ -235,7 +235,7 @@ export default function SuccessStoriesPage() {
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Succeed</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              The key factors behind every success story at Genius Chess Academy (INTERNATIONAL SCHOOL OF CHESS)
+              The key factors behind every success story at Guru Chess Academy (INTERNATIONAL SCHOOL OF CHESS)
             </p>
           </div>
 
@@ -279,12 +279,13 @@ export default function SuccessStoriesPage() {
             Join our community of champions and start your transformation with our proven methodology today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <Link href = "/book-demo">
-            <Button className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
+            <Button onClick={() => {
+                    setIsOpen(false);
+                    setIsDemoModalOpen(true);
+                  }} className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
               <Calendar className="w-6 h-6 mr-2" />
               Book Your Free Demo
             </Button>
-            </Link>
             <Link href="/programs">
               <Button
                 variant="outline"

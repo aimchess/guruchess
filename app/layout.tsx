@@ -8,50 +8,55 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Genius Chess Academy (International School of Chess) - Learn Chess from Grandmaster Pravin Thipsay',
-    template: '%s | Genius Chess Academy (International School of Chess)',
+    default: 'Guru Chess Academy - International School of Chess | Top Coaching in Indirapuram',
+    template: '%s | Guru Chess Academy',
   },
   description:
-    'Master chess with Genius Chess Academy (International School of Chess). Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy (International School of Chess).',
+    'Master chess at Guru Chess Academy, the premier International School of Chess. Professional coaching in Indirapuram, Ghaziabad and online, led by expert mentors for all skill levels.',
   keywords: [
-    'Genius Chess Academy International School of Chess',
-    'Genius Chess Academy',
-    'Genius Chess Academy',
-    'International school of chess',
-    'Chess Udaipur',
-    'Grandmaster Pravin Thipsay',
-    'learn chess',
-    'online chess lessons',
-    'offline chess training',
-    'chess academy',
-    'chess training',
+    'Guru Chess Academy',
+    'International School of Chess',
+    'Chess Coaching Indirapuram',
+    'Chess Classes Ghaziabad',
+    'Best Chess Academy Delhi NCR',
+    'Pradeep Pathak Chess',
+    'Learn Chess Online',
+    'FIDE Rated Coaches',
+    'Tournament Preparation',
+    'Chess for Kids Indirapuram',
   ],
-  metadataBase: new URL('https://www.thegeniuschessacademy.com'),
+  metadataBase: new URL('https://www.guruchessacademy.com'),
   alternates: {
-    canonical: 'https://www.thegeniuschessacademy.com',
+    canonical: 'https://www.guruchessacademy.com',
   },
-  authors: [{ name: 'Genius Chess Academy', url: 'https://www.thegeniuschessacademy.com' }],
-  creator: 'Genius Chess Academy',
-  publisher: 'Genius Chess Academy',
+  authors: [{ name: 'Guru Chess Academy', url: 'https://www.guruchessacademy.com' }],
+  creator: 'Guru Chess Academy',
+  publisher: 'Guru Chess Academy',
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
-    description: 'World-class chess training academy led by GM Pravin Thipsay.',
-    url: 'https://www.thegeniuschessacademy.com',
-    siteName: 'Genius Chess Academy',
+    title: 'Guru Chess Academy - Master the 64 Squares',
+    description: 'World-class chess training academy in Indirapuram, Ghaziabad led by expert mentors.',
+    url: 'https://www.guruchessacademy.com',
+    siteName: 'Guru Chess Academy',
     images: [
       {
-        url: 'https://www.thegeniuschessacademy.com/genius.png',
+        url: 'https://www.guruchessacademy.com/guru-logo.jpeg',
         width: 800,
         height: 600,
-        alt: 'Genius Chess Academy Logo',
+        alt: 'Guru Chess Academy Logo',
       },
     ],
     locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Guru Chess Academy | Professional Chess Mentorship',
+    description: 'Elite chess training for beginners and competitive players.',
+    images: ['https://www.guruchessacademy.com/guru-logo.jpeg'],
   },
   generator: 'Next.js',
 };
@@ -69,9 +74,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
         <link rel="manifest" href="/site.webmanifest"/>
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
+        
+        {/* Brand Theme Color - Deep Blue */}
+        <meta name="theme-color" content="#2B5292" />
 
         {/* JSON-LD Structured Data */}
         <script
@@ -81,39 +86,39 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'Genius Chess Academy (International School of Chess)',
-                url: 'https://www.thegeniuschessacademy.com',
-                logo: 'https://www.thegeniuschessacademy.com/genius.png',
-                description: 'World-class chess training academy led by Grandmaster Pravin Thipsay.',
+                name: 'Guru Chess Academy (International School of Chess)',
+                url: 'https://www.guruchessacademy.com',
+                logo: 'https://www.guruchessacademy.com/guru-logo.jpeg',
+                description: 'Professional chess training academy providing FIDE-standard coaching for students of all ages.',
                 address: {
                   '@type': 'PostalAddress',
-                  streetAddress: 'Sector 3',
-                  addressLocality: 'Udaipur, jaipur',
-                  addressRegion: 'Rajasthan',
-                  postalCode: '313001',
+                  streetAddress: 'Sunrise School, near gate number 2, Shipra Sun City, Indirapuram',
+                  addressLocality: 'Ghaziabad',
+                  addressRegion: 'Uttar Pradesh',
+                  postalCode: '201014',
                   addressCountry: 'IN',
                 },
                 contactPoint: {
                   '@type': 'ContactPoint',
-                  telephone: '+91-9636809800',
-                  email: 'geniuschessacademy12@gmail.com',
+                  telephone: '+91-9911289767',
+                  email: 'guruchessacademy@gmail.com',
+                  contactType: 'Customer Service'
                 },
                 aggregateRating: {
                   '@type': 'AggregateRating',
                   ratingValue: '4.9',
-                  reviewCount: '250',
+                  reviewCount: '210',
                 },
               },
               {
                 '@context': 'https://schema.org',
                 '@type': 'Person',
-                name: 'Grandmaster Pravin Thipsay',
-                jobTitle: 'Head Coach',
-                url: 'https://www.thegeniuschessacademy.com',
-                sameAs: [
-                  'https://en.wikipedia.org/wiki/Pravin_Thipsay',
-                  'https://ratings.fide.com/profile/5001499',
-                ],
+                name: 'Mr. Pradeep Pathak',
+                jobTitle: 'Founder & Chief Mentor',
+                affiliation: {
+                  '@type': 'Organization',
+                  name: 'Guru Chess Academy'
+                }
               },
               {
                 '@context': 'https://schema.org',
@@ -121,18 +126,18 @@ export default function RootLayout({
                 mainEntity: [
                   {
                     '@type': 'Question',
-                    name: 'What is Genius Chess Academy?',
+                    name: 'Where is Guru Chess Academy located?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Genius Chess Academy is a world-class chess training institute led by Grandmaster Pravin Thipsay offering online and offline chess training.'
+                      text: 'Guru Chess Academy is located at Sunrise School, Shipra Sun City, Indirapuram, Ghaziabad, Uttar Pradesh.'
                     }
                   },
                   {
                     '@type': 'Question',
-                    name: 'Who is the head coach of Genius Chess Academy?',
+                    name: 'What levels of chess do you teach?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'The head coach is Grandmaster Pravin Thipsay, one of India’s top chess grandmasters.'
+                      text: 'We offer structured courses for all levels: Beginner (Pawn), Intermediate (Knight), Advanced (Rook), and Master (King) levels.'
                     }
                   }
                 ]

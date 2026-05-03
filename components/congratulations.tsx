@@ -116,7 +116,7 @@ export default function FMAwardSection() {
                 <p className="text-[9px] md:text-[10px] font-black uppercase tracking-widest opacity-80">Proudly Trained At</p>
               </div>
               <h4 className="text-lg md:text-xl font-black uppercase leading-tight">
-                Genius Chess Academy
+                Guru Chess Academy
               </h4>
               <p className="text-xs md:text-sm font-bold opacity-90 leading-tight mt-1">
                 International School of Chess <br />

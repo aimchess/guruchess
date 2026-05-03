@@ -13,10 +13,15 @@ import {
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { useState } from "react"
+import { BookDemoModal } from "./bookdemo" // Ensure path is correct
 
 export function AchievementShowcase() {
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
+
   return (
     <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-amber-50 to-white">
+      <BookDemoModal isOpen={isDemoModalOpen} onClose={() => setIsDemoModalOpen(false)} />
       {/* Background Animated Elements (Confetti/Glitter) */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         {Array.from({ length: 15 }).map((_, i) => (
@@ -55,7 +60,7 @@ export function AchievementShowcase() {
           <div className="inline-flex items-center gap-2 bg-white border border-amber-200 px-6 py-2 rounded-full mb-6 shadow-md">
             <Trophy className="w-5 h-5 text-amber-600" />
             <span className="font-bold text-amber-800 uppercase tracking-wide text-xs sm:text-sm">
-              Genius Chess Academy Pride
+              Guru Chess Academy Pride
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-4">
@@ -120,7 +125,7 @@ export function AchievementShowcase() {
                   </div>
 
                   <p className="text-gray-500 text-sm italic border-t pt-4">
-                    "A shining example of dedication and strategic brilliance at Genius Chess Academy."
+                    "A shining example of dedication and strategic brilliance at Guru Chess Academy."
                   </p>
                 </CardContent>
               </Card>
@@ -198,11 +203,12 @@ export function AchievementShowcase() {
               transition={{ delay: 0.6 }}
               className="pt-4 flex justify-center sm:justify-start"
             >
-              <Link href="/book-demo">
-                <Button className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-6 rounded-full text-lg font-bold shadow-lg transition-all hover:scale-105">
+                <Button onClick={() => {
+                    setIsDemoModalOpen(false);
+                    setIsDemoModalOpen(true);
+                  }} className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-6 rounded-full text-lg font-bold shadow-lg transition-all hover:scale-105">
                   Train With Champions
                 </Button>
-              </Link>
             </motion.div>
 
           </div>
