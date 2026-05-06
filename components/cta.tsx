@@ -49,7 +49,7 @@ export function CallToAction() {
               >
                 <Star size={14} fill="white" className="text-white" />
                 <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-white">
-                  Enrollment Open 2025
+                  Enrollment Open 2026
                 </span>
               </div>
 

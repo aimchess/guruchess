@@ -21,7 +21,7 @@ export function MissionVision() {
     {
       id: "02",
       title: "VISION",
-      description: "To become a global leader in chess pedagogy, building an international school that transforms young enthusiasts into top-class competitive players and strategic thinkers ready for life's challenges.",
+      description: "To become a global leader in chess pedagogy, building an academy that transforms young enthusiasts into top-class competitive players and strategic thinkers ready for life's challenges.",
       icon: <Lightbulb size={32} />,
       color: brandBlue,
       // Internal card tint

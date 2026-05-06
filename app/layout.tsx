@@ -8,14 +8,14 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Guru Chess Academy - International School of Chess | Top Coaching in Indirapuram',
+    default: 'Guru Chess Academy - Turning Interest into Passion | Top Coaching in Indirapuram',
     template: '%s | Guru Chess Academy',
   },
   description:
-    'Master chess at Guru Chess Academy, the premier International School of Chess. Professional coaching in Indirapuram, Ghaziabad and online, led by expert mentors for all skill levels.',
+    'Master chess at Guru Chess Academy, the premier Chess Academy. Professional coaching in Indirapuram, Ghaziabad and online, led by expert mentors for all skill levels.',
   keywords: [
     'Guru Chess Academy',
-    'International School of Chess',
+    'Chess Academy',
     'Chess Coaching Indirapuram',
     'Chess Classes Ghaziabad',
     'Best Chess Academy Delhi NCR',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Guru Chess Academy - Master the 64 Squares',
+    title: 'Guru Chess Academy - Turning Interest into Passion',
     description: 'World-class chess training academy in Indirapuram, Ghaziabad led by expert mentors.',
     url: 'https://www.guruchessacademy.com',
     siteName: 'Guru Chess Academy',
@@ -86,7 +86,7 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'Guru Chess Academy (International School of Chess)',
+                name: 'Guru Chess Academy',
                 url: 'https://www.guruchessacademy.com',
                 logo: 'https://www.guruchessacademy.com/guru-logo.jpeg',
                 description: 'Professional chess training academy providing FIDE-standard coaching for students of all ages.',

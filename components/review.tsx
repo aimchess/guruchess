@@ -49,7 +49,7 @@ export function Testimonials() {
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-[1000] text-slate-900 tracking-tighter uppercase italic leading-none"
+            className="text-3xl md:text-5xl font-[1000] text-slate-900 tracking-tighter uppercase italic leading-none"
           >
             TESTIMONIALS
           </motion.h2>

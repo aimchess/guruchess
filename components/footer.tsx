@@ -171,7 +171,7 @@ export function Footer() {
         <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-gray-500 text-[10px] font-black uppercase tracking-[0.4em]">
-              © 2025 GURU CHESS ACADEMY. International School of Chess.
+              © 2026 GURU CHESS ACADEMY. Turning Interest into Passion.
             </p>
           </div>
 

@@ -43,7 +43,7 @@ export function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 md:h-3 md:w-3 bg-green-500"></span>
               </span>
               <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500">
-                 <span style={{ color: brand.blue }}>Top Professional Academy</span>
+                 <span style={{ color: brand.blue }}>Top Professional Chess Academy</span>
               </span>
             </motion.div>
 

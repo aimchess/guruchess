@@ -235,7 +235,7 @@ export default function SuccessStoriesPage() {
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Succeed</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              The key factors behind every success story at Guru Chess Academy (INTERNATIONAL SCHOOL OF CHESS)
+              The key factors behind every success story at Guru Chess Academy
             </p>
           </div>
 

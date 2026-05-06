@@ -67,7 +67,7 @@ export function Navbar() {
                   <span className="text-[#333333] ml-2">CHESS ACADEMY</span>
                 </h1>
                 <p className="hidden sm:block text-[8px] text-gray-400 tracking-[0.2em] font-bold uppercase leading-tight mt-0.5">
-                  International School of Chess
+                  Turning Interest into Passion
                 </p>
               </div>
             </Link>
