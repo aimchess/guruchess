@@ -13,43 +13,49 @@ export function Services() {
       title: "Chess Coaching",
       description: "Basic to pro levels, 1-on-1 or group coaching.",
       image: "/chess2.png", 
-      bgColor: "#F0F4F8", // Soft Blue tint
-      btnColor: brandBlue
+      bgColor: "#F0F4F8",
+      btnColor: brandBlue,
+      href: "/coaching" // Unique path
     },
     {
       title: "Tournaments",
       description: "Organizing inter-club competitive events.",
       image: "/chess4.png",
-      bgColor: "#FFF7F2", // Soft Orange tint
-      btnColor: brandOrange
+      bgColor: "#FFF7F2",
+      btnColor: brandOrange,
+      href: "/tournament" // Unique path
     },
     {
       title: "Holiday Camps",
       description: "Intensive seasonal training for rapid growth.",
       image: "/chess1.png",
       bgColor: "#F0F4F8",
-      btnColor: brandBlue
+      btnColor: brandBlue,
+      href: "/holiday" // Unique path
     },
     {
       title: "Online Training",
       description: "Global virtual classrooms for remote learning.",
       image: "/chess3.png",
       bgColor: "#FFF7F2",
-      btnColor: brandOrange
+      btnColor: brandOrange,
+      href: "/training" // Unique path
     },
     {
       title: "Chess Clocks",
       description: "Official DGT clocks and timing equipment.",
       image: "/clock.png",
       bgColor: "#F0F4F8",
-      btnColor: brandBlue
+      btnColor: brandBlue,
+      href: "/clock" // Unique path
     },
     {
       title: "Chess Books",
       description: "Theory and tactical guides for all levels.",
       image: "/book.png",
       bgColor: "#FFF7F2",
-      btnColor: brandOrange
+      btnColor: brandOrange,
+      href: "/books" // Unique path
     }
   ]
 
@@ -62,13 +68,13 @@ export function Services() {
           <h2 className="text-3xl md:text-5xl font-[1000] text-[#1a1a1a] tracking-tighter uppercase italic">
             Our <span style={{ color: brandBlue }}>Learning</span> <span style={{ color: brandOrange }}>World</span>
           </h2>
-          <div className="h-1.5 w-20 bg-[#C2410C] mx-auto mt-4 rounded-full" /> {/* Centered accent line */}
+          <div className="h-1.5 w-20 bg-[#C2410C] mx-auto mt-4 rounded-full" />
           <p className="text-gray-400 font-bold text-[10px] md:text-xs uppercase tracking-[0.3em] mt-4">
             Professional programs for future grandmasters
           </p>
         </div>
 
-        {/* Responsive Grid: 1 col on mobile, 2 on tablet, 3 on desktop */}
+        {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -99,8 +105,8 @@ export function Services() {
                 </p>
               </div>
 
-              {/* Action Button */}
-              <Link href="/contact" className="mt-auto">
+              {/* Action Button - Updated Link */}
+              <Link href={service.href} className="mt-auto">
                 <button 
                   className="w-full py-4 px-8 flex items-center justify-between text-white font-black text-[11px] tracking-[0.2em] uppercase transition-all active:scale-95"
                   style={{ backgroundColor: service.btnColor }}
