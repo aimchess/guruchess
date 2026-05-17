@@ -31,7 +31,7 @@ export function AboutHero() {
           transition={{ duration: 0.8 }}
           className="text-xs md:text-sm font-bold uppercase tracking-[0.4em] text-white/70"
         >
-          Guru Chess Academy • Established 2010
+          Guru Chess Academy • Established 2006
         </motion.p>
 
         <motion.h1 

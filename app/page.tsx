@@ -11,7 +11,7 @@ import { Hero } from "@/components/hero"
 import { Services } from "@/components/service"
 import { WhyChooseUs } from "@/components/why-us"
 import { Courses } from "@/components/courses"
-import { Achievements } from "@/components/ach"
+import { SuccessStories } from "@/components/ach"
 import { Testimonials } from "@/components/review"
 import { FAQ } from "@/components/faq"
 import { CallToAction } from "@/components/cta"
@@ -95,7 +95,7 @@ export default function HomePage() {
           <Services />
           <WhyChooseUs />
           <Courses />
-          <Achievements />
+          <SuccessStories />
           <Testimonials />
           <FAQ />
           <CallToAction />

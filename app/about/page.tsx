@@ -12,6 +12,7 @@ import { MissionVision } from "@/components/vision"
 import { WhyDifferent } from "@/components/diff"
 import { CallToAction } from "@/components/cta"
 import { Testimonials } from "@/components/review"
+import CoachSection from "@/components/founder"
 
 export default function AboutPage() {
   return (
@@ -19,6 +20,7 @@ export default function AboutPage() {
       <Navbar />
       <AboutHero/>
       <AboutUsSection/>
+      <CoachSection/>
       <MissionVision/>
       <WhyDifferent/>
       <Testimonials/>

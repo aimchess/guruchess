@@ -1,175 +1,156 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Trophy, Star, ShieldCheck, Crown, Medal, Target } from "lucide-react"
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Trophy, Quote, Calendar, ShieldCheck, Award } from "lucide-react"
 
-export function Achievements() {
-  const brandBlue = "#2B5292"
-  const brandOrange = "#C2410C"
-
-  const achievements = [
+export function SuccessStories() {
+  const stories = [
     {
-      name: "Viha Jain",
-      title: "Inter-School Champion",
-      status: "ELITE",
-      desc: "Secured 2nd Place in Team Competition and 3rd Place individually on the First Board.",
-      image: "https://images.unsplash.com/photo-1596495573105-d1465b77591c?q=80&w=400&h=400&fit=crop",
-      flag: "🇮🇳",
-      themeColor: brandBlue,
-      bgColor: "#EBF1FF", // Very light blue tint
-      borderColor: "#D1E0FF",
-      icon: <Crown size={20} fill="currentColor" />
+      id: "vihaan",
+      name: "Vihaan",
+      duration: "7 Years with Academy",
+      rating: "1700+ FIDE RATED",
+      bgColor: "#2B5292", // Navy
+      accentColor: "#60A5FA", // Lighter blue for tags
+      images: [
+        "/v4.jpeg",
+        "/v1.jpeg",
+        "/v2.jpeg",
+        "/v5.jpeg"
+      ],
+      highlights: ["Delhi State Champ", "UP State Gold", "CBSE Zonals Winner"],
+      testimonial: "Shailendra Sir has been teaching Vihaan since he was 5. In 7 years, we've seen him grow from a total beginner to a 1700+ FIDE rated player. Sir has been his biggest motivator in tough times and always pushed him."
     },
     {
-      name: "Aamir Yassar",
-      title: "FIDE Rated: 1450",
-      status: "GLOBAL",
-      desc: "Earned official international recognition and a global chess ranking from FIDE.",
-      image: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=400&h=400&fit=crop",
-      flag: "🇮🇳",
-      themeColor: brandOrange,
-      bgColor: "#FFF2EB", // Very light orange tint
-      borderColor: "#FFDCC9",
-      icon: <Target size={20} />
-    },
-    {
-      name: "Aaryash",
-      title: "Seigle Cup Gold",
-      status: "CHAMPION",
-      desc: "Demonstrated exceptional strategy to be crowned Winner in this prestigious tournament.",
-      image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=400&h=400&fit=crop",
-      flag: "🇺🇸",
-      themeColor: "#D97706",
-      bgColor: "#FFF9E6", // Very light gold tint
-      borderColor: "#FCE49F",
-      icon: <Trophy size={20} fill="currentColor" />
-    },
-    {
-      name: "Rohan V.",
-      title: "National Merit",
-      status: "PRODIGY",
-      desc: "Placed in the top 10 at the National U-12 Championship with a perfect tactical score.",
-      image: "https://images.unsplash.com/photo-1503919919749-61746da6197f?q=80&w=400&h=400&fit=crop",
-      flag: "🇮🇳",
-      themeColor: "#0D9488",
-      bgColor: "#E6F7F5", // Very light teal tint
-      borderColor: "#BEECE6",
-      icon: <Medal size={20} fill="currentColor" />
+      id: "irish-champ",
+      name: "Irish National Champ",
+      duration: "3 Years with Academy",
+      rating: "1600+ NATIONAL",
+      bgColor: "#C2410C", // Orange
+      accentColor: "#FDBA74", // Lighter orange for tags
+      images: [
+        "/g1.jpeg",
+      ],
+      highlights: ["U16 Irish Gold", "World Youth Selected", "Women's Challenger Champ"],
+      testimonial: "In 3 years, I went from 1400 online to 1700, and 1300 National to 1600. I won the women's challenger section and got selected for World Youth Championship. Sir has helped in many ways."
     }
   ]
 
-  const scrollItems = [...achievements, ...achievements]
-
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 mb-16 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="space-y-4"
-        >
-          <h2 className="text-3xl md:text-5xl font-[1000] tracking-tighter ">
-            Academy <span style={{ color: brandBlue }}>Hall of Fame</span>
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-[1000] tracking-tighter text-slate-900 mb-2 uppercase italic">
+            Academy <span className="text-[#2B5292]">Hall of Fame</span>
           </h2>
-          <div className="h-1.5 w-24 bg-[#C2410C] mx-auto rounded-full" />
-          <p className="text-gray-400 font-bold text-[10px] md:text-xs uppercase tracking-[0.4em] pt-2">
-            Celebrating Excellence in Strategic Warfare
-          </p>
-        </motion.div>
-      </div>
+          <div className="h-1 w-16 bg-[#C2410C] mx-auto rounded-full" />
+        </div>
 
-      <div className="relative flex overflow-hidden">
-        <motion.div
-          className="flex whitespace-nowrap"
-          animate={{ x: [0, -1640] }} 
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 35, // Slightly slower for better readability
-              ease: "linear",
-            },
-          }}
-          style={{ width: "fit-content" }}
-        >
-          {scrollItems.map((item, idx) => (
-            <div key={idx} className="inline-block px-4 w-[360px] md:w-[400px]">
-              <div 
-                className="relative flex flex-col rounded-[3rem] p-8 border-2 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 whitespace-normal group"
-                style={{ 
-                  backgroundColor: item.bgColor, 
-                  borderColor: item.borderColor 
-                }}
-              >
-                
-                {/* Header: Portrait & Identity */}
-                <div className="flex items-start justify-between mb-8">
-                  <div className="relative">
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-3xl overflow-hidden border-4 border-white shadow-lg relative z-10">
-                      <img 
-                        src={item.image} 
-                        alt={item.name} 
-                        className="w-full h-full object-cover" 
-                      />
-                    </div>
-                    <div 
-                      className="absolute -top-3 -right-3 z-20 text-white p-2 rounded-xl shadow-lg rotate-12 transition-transform group-hover:scale-110"
-                      style={{ backgroundColor: item.themeColor }}
-                    >
-                      {item.icon}
-                    </div>
-                  </div>
-
-                  <div className="text-right">
-                    <h3 className="text-lg md:text-xl font-black text-slate-900 uppercase tracking-tighter leading-none mb-1">
-                      {item.name}
-                    </h3>
-                    <span 
-                      className="text-[9px] font-black tracking-widest uppercase px-2 py-0.5 rounded-full border border-white bg-white/50"
-                      style={{ color: item.themeColor }}
-                    >
-                      {item.status}
-                    </span>
-                    <div className="mt-3 text-xl">{item.flag}</div>
-                  </div>
-                </div>
-
-                {/* Body Content */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <div className="h-1 w-8 rounded-full" style={{ backgroundColor: item.themeColor }} />
-                    <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Official Achievement</span>
-                  </div>
-                  
-                  <h4 className="text-2xl font-[1000] uppercase tracking-tighter leading-[1.1] min-h-[3.5rem] break-words" style={{ color: item.themeColor }}>
-                    {item.title}
-                  </h4>
-                  
-                  <p className="text-[12px] text-slate-600 font-semibold leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-
-                {/* Verified Footer */}
-                <div className="mt-8 pt-6 border-t border-black/5 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <ShieldCheck size={14} className="text-slate-400" />
-                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-tighter">
-                      Verified Academy Record
-                    </span>
-                  </div>
-                  <Trophy size={16} className="text-slate-300 opacity-30 group-hover:opacity-100 transition-all duration-500" style={{ color: item.themeColor }} />
-                </div>
-              </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {stories.map((story) => (
+            <StoryCard key={story.id} story={story} />
           ))}
-        </motion.div>
-
-        {/* Gradient Fades */}
-        <div className="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        </div>
       </div>
     </section>
+  )
+}
+
+function StoryCard({ story }: { story: any }) {
+  const [currentImg, setCurrentImg] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImg((prev) => (prev + 1) % story.images.length)
+    }, 4000)
+    return () => clearInterval(timer)
+  }, [story.images.length])
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="flex flex-col rounded-[2.5rem] overflow-hidden shadow-2xl h-full max-h-[640px]"
+      style={{ backgroundColor: story.bgColor }}
+    >
+      {/* IMAGE AREA */}
+      <div className="relative h-90 w-full overflow-hidden bg-black/10">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentImg}
+            src={story.images[currentImg]}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-full object-cover brightness-90"
+          />
+        </AnimatePresence>
+        
+        {/* Progress Indicators */}
+        <div className="absolute top-4 left-8 right-8 flex gap-1.5 z-20">
+          {story.images.map((_: any, i: number) => (
+            <div key={i} className="h-1 flex-1 bg-white/20 rounded-full overflow-hidden">
+              {i === currentImg && (
+                <motion.div 
+                  initial={{ width: 0 }} 
+                  animate={{ width: "100%" }} 
+                  transition={{ duration: 4, ease: "linear" }}
+                  className="h-full bg-white" 
+                />
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Rating Overlay */}
+        <div className="absolute bottom-4 left-8">
+           <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-lg border border-white/20 flex items-center gap-2">
+              <Trophy size={12} className="text-white" />
+              <span className="text-[10px] font-black uppercase tracking-widest text-white">{story.rating}</span>
+           </div>
+        </div>
+      </div>
+
+      {/* TEXT AREA */}
+      <div className="p-8 md:p-10 flex flex-col flex-grow text-white">
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <div className="flex items-center gap-2 mb-1 opacity-70">
+              <ShieldCheck size={14} />
+              <span className="text-[10px] font-black uppercase tracking-widest">Verified Success</span>
+            </div>
+            <h3 className="text-2xl font-black tracking-tight uppercase">
+              {story.name}
+            </h3>
+            <p className="text-[10px] font-bold uppercase tracking-widest mt-1 flex items-center gap-1 opacity-60">
+              <Calendar size={10} /> {story.duration}
+            </p>
+          </div>
+          <Quote size={40} className="opacity-10 absolute right-8 top-[55%]" />
+        </div>
+
+        <div className="relative mb-6">
+          <p className="text-white/90 font-medium leading-relaxed italic text-[15px] line-clamp-4">
+            "{story.testimonial}"
+          </p>
+        </div>
+
+        {/* Highlight Tags */}
+        <div className="mt-auto pt-6 border-t border-white/10 flex flex-wrap gap-2">
+          {story.highlights.map((tag: string) => (
+            <div 
+              key={tag} 
+              className="px-3 py-1.5 rounded-xl text-[9px] font-black uppercase tracking-widest bg-white/10 border border-white/10 flex items-center gap-2"
+            >
+              <Award size={12} style={{ color: story.accentColor }} />
+              {tag}
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
   )
 }
