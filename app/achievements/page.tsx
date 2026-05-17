@@ -1,6 +1,6 @@
 "use client"
 
-import { Achievements } from "@/components/ach"
+import { SuccessStories } from "@/components/ach"
 import { AchievementsHero } from "@/components/achBanner"
 import { AchievementCTA } from "@/components/achcta"
 import { AutoGallery } from "@/components/calausel"
@@ -57,7 +57,7 @@ export default function AchievementsPage() {
       
       <Navbar/>
       <AchievementsHero/>
-      <Achievements/>
+      <SuccessStories/>
 
      
 
