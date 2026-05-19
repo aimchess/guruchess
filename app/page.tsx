@@ -31,7 +31,7 @@ export default function HomePage() {
     "name": "Guru Chess Academy",
     "url": "https://www.guruchessacademy.com",
     "logo": "/guru-logo.jpeg",
-    "description": "Professional chess training academy led by Mr. Pradeep Pathak and a team of International Rated players. Specializing in FIDE-standard coaching for kids and competitive players.",
+    "description": "Professional chess training academy led by Mr. Pradeep Pathak and a team of International Rated players. Specializing in Master coaching for kids and competitive players.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Sunrise School, Shipra Sun City, Indirapuram",
@@ -69,7 +69,7 @@ export default function HomePage() {
         />
         <meta
           name="keywords"
-          content="chess academy Ghaziabad, chess coaching Indirapuram, Guru Chess Academy, Pradeep Pathak, learn chess online, FIDE rated coaches, chess for kids"
+          content="chess academy Ghaziabad, chess coaching Indirapuram, Guru Chess Academy, Pradeep Pathak, learn chess online, Master rated coaches, chess for kids"
         />
         <meta name="author" content="Guru Chess Academy" />
         <meta name="robots" content="index, follow" />

@@ -45,7 +45,7 @@ export function Courses() {
       level: "King Level",
       description: "Grandmaster-level training including engine analysis and tournament psychology.",
       image: "/mas.avif", // Replace with your image
-      rating: "1800 - 2400+",
+      rating: "1800 - 2100+",
       features: ["Engine Work", "Prep Secrets", "Master Strategy"],
       accent: brandOrange
     }
@@ -151,20 +151,7 @@ export function Courses() {
           ))}
         </div>
 
-        {/* Bottom Context Badge */}
-        <div className="mt-20 flex justify-center">
-            <div className="inline-flex items-center gap-6 bg-white border border-gray-100 px-8 py-4 rounded-3xl shadow-sm">
-                <div className="flex items-center gap-2">
-                    <Clock size={18} style={{ color: brandBlue }} />
-                    <span className="text-sm font-bold text-gray-600 italic">Lifetime Access</span>
-                </div>
-                <div className="h-4 w-px bg-gray-200" />
-                <div className="flex items-center gap-2">
-                    <Trophy size={18} style={{ color: brandOrange }} />
-                    <span className="text-sm font-bold text-gray-600 italic">FIDE Certification</span>
-                </div>
-            </div>
-        </div>
+       
       </div>
     </section>
   )

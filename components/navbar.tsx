@@ -101,7 +101,7 @@ export function Navbar() {
                 onClick={() => setIsDemoModalOpen(true)}
                 className="bg-[#C2410C] hover:bg-[#A34F26] text-white font-bold px-6 py-5 rounded-md shadow-md text-xs tracking-widest transition-all active:scale-95"
               >
-                BOOK A FREE DEMO
+                BOOK A DEMO
               </Button>
             </div>
 
@@ -155,7 +155,7 @@ export function Navbar() {
                   }}
                   className="w-full bg-[#C2410C] text-white font-bold py-7 text-lg rounded-2xl"
                 >
-                  BOOK FREE DEMO
+                  BOOK DEMO
                 </Button>
               </div>
             </div>

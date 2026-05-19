@@ -138,9 +138,7 @@ export function Footer() {
                 </div>
                 
                 <div className="space-y-4">
-                  <p className="text-[12px] font-semibold text-gray-300 leading-relaxed">
-                    Sunrise School, Near Gate No. 2, Shipra Sun City, Indirapuram, Ghaziabad, UP 201014
-                  </p>
+                  
                   <div className="flex items-center gap-3">
                     <Phone size={16} style={{ color: brandOrange }} />
                     <span className="text-[14px] font-black tracking-tighter text-white">+91 99112 89767</span>

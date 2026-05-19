@@ -284,7 +284,7 @@ export default function SuccessStoriesPage() {
                     setIsDemoModalOpen(true);
                   }} className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300">
               <Calendar className="w-6 h-6 mr-2" />
-              Book Your Free Demo
+              Book Your Demo
             </Button>
             <Link href="/programs">
               <Button

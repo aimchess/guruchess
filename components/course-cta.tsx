@@ -67,7 +67,7 @@ export function DottedCTA() {
                   className="h-16 px-10 rounded-2xl text-lg font-black shadow-2xl transition-all hover:scale-105 active:scale-95 group flex items-center gap-3 border-b-4 border-[#8B3308]"
                   style={{ backgroundColor: brandOrange, color: 'white' }}
                 >
-                  BOOK FREE DEMO
+                  BOOK DEMO
                   <Sparkles size={18} className="group-hover:rotate-12 transition-transform" />
                 </Button>
             </div>

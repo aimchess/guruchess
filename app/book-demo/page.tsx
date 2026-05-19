@@ -125,7 +125,7 @@ export default function BookDemoPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
             Book Your{" "}
             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              FREE Demo Class
+              Demo Class
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-12">
@@ -317,7 +317,7 @@ export default function BookDemoPage() {
                         ) : (
                           <>
                             <Calendar className="w-5 h-5 mr-2" />
-                            Book My FREE Demo
+                            Book My Demo
                           </>
                         )}
                       </Button>
@@ -442,7 +442,7 @@ export default function BookDemoPage() {
               className="w-full sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
             >
               <Calendar className="w-6 h-6 mr-2" />
-              Book FREE Demo Now
+              Book Demo Now
             </Button>
             <Button
               variant="outline"

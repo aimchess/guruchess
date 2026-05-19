@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'Best Chess Academy Delhi NCR',
     'Pradeep Pathak Chess',
     'Learn Chess Online',
-    'FIDE Rated Coaches',
+    'Master Coaches',
     'Tournament Preparation',
     'Chess for Kids Indirapuram',
   ],
@@ -89,7 +89,7 @@ export default function RootLayout({
                 name: 'Guru Chess Academy',
                 url: 'https://www.guruchessacademy.com',
                 logo: 'https://www.guruchessacademy.com/guru-logo.jpeg',
-                description: 'Professional chess training academy providing FIDE-standard coaching for students of all ages.',
+                description: 'Professional chess training academy providing master coaching for students of all ages.',
                 address: {
                   '@type': 'PostalAddress',
                   streetAddress: 'Sunrise School, near gate number 2, Shipra Sun City, Indirapuram',

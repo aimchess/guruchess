@@ -68,7 +68,7 @@ export function CallToAction() {
                     className="w-full md:w-auto h-16 px-10 rounded-xl text-lg font-[1000] transition-all hover:scale-105 active:scale-95 flex items-center gap-3 shadow-[0_8px_0_0_#8b3308]"
                     style={{ backgroundColor: brandOrange, color: 'white' }}
                   >
-                    BOOK FREE DEMO
+                    BOOK DEMO
                     <Play size={20} fill="white" />
                   </Button>
 

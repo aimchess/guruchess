@@ -19,11 +19,7 @@ export function ContactSection() {
   const brandOrange = "#C2410C"
 
   const contactDetails = [
-    {
-      icon: <MapPin size={20} />,
-      title: "Academy Hub",
-      value: "Sunrise School, Indirapuram, Ghaziabad, UP 201014",
-    },
+   
     {
       icon: <Phone size={20} />,
       title: "General Line",
@@ -142,27 +138,7 @@ export function ContactSection() {
           </div>
         </div>
 
-        {/* 2. THE CINEMATIC MAP (Below the card) */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mt-12 relative w-full h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white"
-        >
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.268774737213!2d77.36830727550039!3d28.621703675671195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf00780000001%3A0xc3f1737e4a87e5b!2sShipra%20Sun%20City%2C%20Indirapuram%2C%20Ghaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
-            className="w-full h-full grayscale-[0.2] contrast-[1.1]"
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
-          ></iframe>
-          
-          {/* Map Overlay Button */}
-          <div className="absolute bottom-8 right-8">
-            <a href="https://maps.app.goo.gl/YourActualLink" target="_blank" className="flex items-center gap-3 bg-white text-[#2B5292] px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest shadow-2xl hover:bg-[#2B5292] hover:text-white transition-all">
-                Navigate to Academy <ExternalLink size={14} />
-            </a>
-          </div>
-        </motion.div>
+       
 
       </div>
     </section>

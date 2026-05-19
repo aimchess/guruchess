@@ -97,7 +97,7 @@ export function Hero() {
             {/* Feature Bento Bar */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 pt-8 lg:pt-10 border-t border-gray-100 w-full">
               {[
-                { icon: ShieldCheck, title: "FIDE Certified", desc: "Expert instruction.", color: brand.blue, bg: "bg-blue-50" },
+                { icon: ShieldCheck, title: "Elite Coaches", desc: "Expert instruction.", color: brand.blue, bg: "bg-blue-50" },
                 { icon: Zap, title: "Tactical IQ", desc: "Logic-building.", color: brand.orange, bg: "bg-orange-50" },
                 { icon: BarChart3, title: "ELO Tracking", desc: "Rating analysis.", color: brand.blue, bg: "bg-blue-50" }
               ].map((feature, i) => (
