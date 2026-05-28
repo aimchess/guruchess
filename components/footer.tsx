@@ -4,6 +4,20 @@ import { Button } from "@/components/ui/button"
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, MessageCircle, Clock, ChevronRight, Star } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+const footerLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Coaches", href: "/coaches" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Blogs", href: "/blogs" },
+]
+const quickLinks = [
+  { label: "Courses", href: "/courses" },
+  { label: "Achievements", href: "/achievements" },
+  { label: "Book a Demo", href: "/contact" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Terms", href: "/terms" },
+]
 
 export function Footer() {
   const brandBlue = "#2B5292"
@@ -97,15 +111,21 @@ export function Footer() {
                 <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-white">Explore</h4>
             </div>
             <ul className="space-y-4">
-              {["Home", "About Us", "Coaches", "Gallery", "Blogs"].map((link) => (
-                <li key={link}>
-                  <Link href={`/${link.toLowerCase().replace(' ', '-')}`} className="text-[13px] font-bold text-gray-400 hover:text-white flex items-center group transition-colors">
-                    <ChevronRight size={12} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0 text-orange-500" />
-                    {link}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+  {footerLinks.map((link) => (
+    <li key={link.label}>
+      <Link
+        href={link.href}
+        className="text-[13px] font-bold text-gray-400 hover:text-white flex items-center group transition-colors"
+      >
+        <ChevronRight
+          size={12}
+          className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0 text-orange-500"
+        />
+        {link.label}
+      </Link>
+    </li>
+  ))}
+</ul>
           </div>
 
           {/* COLUMN 3: ACADEMY (2 Cols) */}
@@ -115,15 +135,22 @@ export function Footer() {
                 <h4 className="text-[11px] font-black uppercase tracking-[0.3em] text-white">Academy</h4>
             </div>
             <ul className="space-y-4">
-              {["Courses", "Achievements", "Book a Demo", "Contact Us", "Terms"].map((link) => (
-                <li key={link}>
-                  <Link href={`/${link.toLowerCase().replace(' ', '-')}`} className="text-[13px] font-bold text-gray-400 hover:text-white flex items-center group transition-colors">
-                    <ChevronRight size={12} className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0 text-blue-500" />
-                    {link}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+  {quickLinks.map((link) => (
+    <li key={link.label}>
+      <Link
+        href={link.href}
+        className="text-[13px] font-bold text-gray-400 hover:text-white flex items-center group transition-colors"
+      >
+        <ChevronRight
+          size={12}
+          className="mr-2 opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0 text-blue-500"
+        />
+
+        {link.label}
+      </Link>
+    </li>
+  ))}
+</ul>
           </div>
 
           {/* COLUMN 4: GLASS LOCATION CARD (4 Cols) */}

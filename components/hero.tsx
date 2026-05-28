@@ -6,6 +6,7 @@ import { ShieldCheck, Zap, Play, ChevronRight, BarChart3 } from "lucide-react"
 import Image from "next/image" // Using Next.js Image for optimization
 import { useState } from "react"
 import { BookDemoModal } from "./bookdemo"
+import Link from "next/link"
 
 export function Hero() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -74,24 +75,31 @@ export function Hero() {
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto"
             >
-              <Button 
-                onClick={openModal}
-                className="w-full sm:w-auto h-14 md:h-16 px-8 md:px-10 rounded-xl text-base md:text-lg font-bold shadow-xl transition-all hover:scale-105 active:scale-95"
-                style={{ backgroundColor: brand.blue, color: 'white' }}
-              >
-                Start Your Journey
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
-              
-              <button 
-                onClick={openModal}
-                className="flex items-center gap-3 group px-4 py-2 transition-opacity hover:opacity-80"
-              >
-                <div className="h-12 w-12 md:h-14 md:w-14 rounded-full border-2 flex items-center justify-center transition-all group-hover:bg-[#C2410C]/10 group-active:scale-90" style={{ borderColor: brand.orange }}>
-                  <Play fill={brand.orange} size={18} className="ml-1 text-[#C2410C]" />
-                </div>
-                <span className="font-bold text-gray-700 tracking-tight text-sm md:text-base">Book Demo Class</span>
-              </button>
+             <Link href="/contact">
+  <Button 
+    className="w-full sm:w-auto h-14 md:h-16 px-8 md:px-10 rounded-xl text-base md:text-lg font-bold shadow-xl transition-all hover:scale-105 active:scale-95"
+    style={{ backgroundColor: brand.blue, color: 'white' }}
+  >
+    Start Your Journey
+    <ChevronRight className="ml-2 h-5 w-5" />
+  </Button>
+</Link>
+
+<button 
+  onClick={openModal}
+  className="flex items-center gap-3 group px-4 py-2 transition-opacity hover:opacity-80"
+>
+  <div 
+    className="h-12 w-12 md:h-14 md:w-14 rounded-full border-2 flex items-center justify-center transition-all group-hover:bg-[#C2410C]/10 group-active:scale-90" 
+    style={{ borderColor: brand.orange }}
+  >
+    <Play fill={brand.orange} size={18} className="ml-1 text-[#C2410C]" />
+  </div>
+
+  <span className="font-bold text-gray-700 tracking-tight text-sm md:text-base">
+    Book Demo Class
+  </span>
+</button>
             </motion.div>
 
             {/* Feature Bento Bar */}
