@@ -157,10 +157,10 @@ export default function BookDemoPage() {
           <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4">
               <Star className="w-8 h-8 fill-white" />
-              <span className="text-xl sm:text-2xl font-black">100% FREE • No Commitment</span>
+              <span className="text-xl sm:text-2xl font-black">100% • No Commitment</span>
             </div>
             <p className="text-base sm:text-xl">
-              Worth ₹2,000 - Get personalized chess assessment, meet our founder, and receive a custom learning plan
+              Get personalized chess assessment, meet our founder, and receive a custom learning plan
               tailored just for you!
             </p>
           </div>

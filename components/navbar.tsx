@@ -2,16 +2,18 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, MonitorPlay } from "lucide-react" // Added icon for Classroom
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence, Variants } from "framer-motion"
-import { BookDemoModal } from "./bookdemo" // Ensure path is correct
+import { BookDemoModal } from "./bookdemo"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false) // Added state
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
   const pathname = usePathname()
+
+  const classroomLink = "https://guruchessacademy.chessplay.io/admin/dashboard/125/classrooms/running"
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -58,7 +60,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center space-x-3 shrink-0">
               <img
                 src="/guru-logo.jpeg"
-                alt="Logo"
+                alt="Guru Chess Academy"
                 className="h-10 sm:h-12 w-auto object-contain"
               />
               <div className="flex flex-col justify-center">
@@ -73,14 +75,14 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-5 xl:space-x-8">
+            <div className="hidden lg:flex items-center space-x-4 xl:space-x-7">
               {navItems.map((item) => {
                 const isActive = pathname === item.href
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`font-bold text-[12px] uppercase tracking-wider whitespace-nowrap transition-all duration-300 relative group ${
+                    className={`font-bold text-[11px] xl:text-[12px] uppercase tracking-wider whitespace-nowrap transition-all duration-300 relative group ${
                       isActive ? "text-[#2B5292]" : "text-gray-600 hover:text-[#2B5292]"
                     }`}
                   >
@@ -95,11 +97,23 @@ export function Navbar() {
               })}
             </div>
 
-            {/* Desktop CTA Button - Now triggers Modal */}
-            <div className="hidden lg:block shrink-0">
+            {/* Action Buttons Group */}
+            <div className="hidden lg:flex items-center space-x-3 shrink-0">
+              {/* Classroom Button - Deep Blue */}
+              <Link href={classroomLink} target="_blank">
+                <Button 
+                  variant="outline"
+                  className="border-[#2B5292] text-[#2B5292] hover:bg-[#2B5292] hover:text-white font-bold px-5 py-5 rounded-md text-[10px] tracking-widest transition-all flex items-center gap-2"
+                >
+                  <MonitorPlay size={14} />
+                  CLASSROOM
+                </Button>
+              </Link>
+
+              {/* Book Demo Button - Vibrant Orange */}
               <Button 
                 onClick={() => setIsDemoModalOpen(true)}
-                className="bg-[#C2410C] hover:bg-[#A34F26] text-white font-bold px-6 py-5 rounded-md shadow-md text-xs tracking-widest transition-all active:scale-95"
+                className="bg-[#C2410C] hover:bg-[#A34F26] text-white font-bold px-5 py-5 rounded-md shadow-md text-[10px] tracking-widest transition-all active:scale-95"
               >
                 BOOK A DEMO
               </Button>
@@ -130,7 +144,7 @@ export function Navbar() {
             exit="closed"
             className="lg:hidden fixed inset-0 bg-white z-[90] overflow-hidden"
           >
-            <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+            <div className="flex flex-col items-center justify-center h-full space-y-6 px-8 text-center">
               {navItems.map((item) => {
                  const isActive = pathname === item.href
                  return (
@@ -146,8 +160,20 @@ export function Navbar() {
                   </Link>
                  )
               })}
-              <div className="pt-4 w-full">
-                {/* Mobile CTA - Now triggers Modal */}
+              
+              <div className="pt-6 w-full space-y-4">
+                {/* Mobile Classroom Button */}
+                <Link href={classroomLink} target="_blank" className="w-full block">
+                    <Button
+                        onClick={() => setIsOpen(false)}
+                        className="w-full bg-[#2B5292] text-white font-bold py-7 text-lg rounded-2xl flex items-center justify-center gap-3"
+                    >
+                        <MonitorPlay size={20} />
+                        JOIN CLASSROOM
+                    </Button>
+                </Link>
+
+                {/* Mobile Demo Button */}
                 <Button
                   onClick={() => {
                     setIsOpen(false);
@@ -155,7 +181,7 @@ export function Navbar() {
                   }}
                   className="w-full bg-[#C2410C] text-white font-bold py-7 text-lg rounded-2xl"
                 >
-                  BOOK DEMO
+                  BOOK FREE DEMO
                 </Button>
               </div>
             </div>
@@ -163,7 +189,6 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* The Modal Component */}
       <BookDemoModal 
         isOpen={isDemoModalOpen} 
         onClose={() => setIsDemoModalOpen(false)} 

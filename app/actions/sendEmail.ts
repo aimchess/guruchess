@@ -41,7 +41,7 @@ export async function sendDemoBookingEmail(formData: any) {
     const { data, error } = await resend.emails.send({
       from: "Guru Chess Academy <onboarding@resend.dev>",
       to: ["Guruchessacademy12@gmail.com"],
-      subject: `FREE BOOKED: ${studentName}`,
+      subject: `BOOKED: ${studentName}`,
       replyTo: email,
       html: `
         <div style="font-family: sans-serif; padding: 20px; border: 2px solid #f97316;">

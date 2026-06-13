@@ -13,6 +13,8 @@ import { WhyDifferent } from "@/components/diff"
 import { CallToAction } from "@/components/cta"
 import { Testimonials } from "@/components/review"
 import CoachSection from "@/components/founder"
+import { FounderSection } from "@/components/anu"
+import DeepakKatiyarProfile from "@/components/deepak"
 
 export default function AboutPage() {
   return (
@@ -20,7 +22,9 @@ export default function AboutPage() {
       <Navbar />
       <AboutHero/>
       <AboutUsSection/>
+      <FounderSection/>
       <CoachSection/>
+      <DeepakKatiyarProfile/>
       <MissionVision/>
       <WhyDifferent/>
       <Testimonials/>

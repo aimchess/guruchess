@@ -16,6 +16,7 @@ import { Testimonials } from "@/components/review"
 import { FAQ } from "@/components/faq"
 import { CallToAction } from "@/components/cta"
 import { Footer } from "@/components/footer"
+import { ChessInSchools } from "@/components/chessinschool"
 
 export default function HomePage() {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
@@ -96,6 +97,7 @@ export default function HomePage() {
           <WhyChooseUs />
           <Courses />
           <SuccessStories />
+          <ChessInSchools/>
           <Testimonials />
           <FAQ />
           <CallToAction />

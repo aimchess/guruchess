@@ -22,15 +22,27 @@ export default function GalleryPage() {
 
   // --- CLEAN DEMO DATA ---
   const images = [
-    { id: 1, src: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?q=80&w=2000", category: "tournaments", title: "National Open 2024", desc: "Advanced tactical battle in the final rounds." },
-    { id: 2, src: "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?q=80&w=2000", category: "achievements", title: "Grandmaster Workshop", desc: "Students learning from visiting International Masters." },
-    { id: 3, src: "https://images.unsplash.com/photo-1560174038-da43ac74f01b?q=80&w=2000", category: "academy", title: "The Strategy Room", desc: "Our premium training center layout." },
-    { id: 4, src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2000", category: "students", title: "Future Grandmasters", desc: "Junior batch during a weekend blitz session." },
-    { id: 5, src: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2000", category: "tournaments", title: "Regional Finals", desc: "U-14 state championship highlights." },
-    { id: 6, src: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2000", category: "achievements", title: "Wall of Fame", desc: "Celebrating 200+ wins this calendar year." },
-    { id: 7, src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000", category: "academy", title: "Digital Analysis", desc: "Using AI tools to analyze student games." },
-    { id: 8, src: "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=2000", category: "students", title: "Summer Camp 2024", desc: "Annual gathering of the Guru Chess family." },
-    { id: 9, src: "https://images.unsplash.com/photo-1580541832626-2a7131ee809f?q=80&w=2000", category: "tournaments", title: "Blitz Marathon", desc: "Speed chess tournament under the lights." },
+    { id: 19, src: "/g1.jpeg", category: "tournaments", title: "National Open 2024", desc: "Advanced tactical battle in the final rounds." },
+    { id: 1, src: "/pri1.jpg", category: "tournaments", title: "National Open 2024", desc: "Advanced tactical battle in the final rounds." },
+    { id: 2, src: "/12.jpg", category: "achievements", title: "Grandmaster Workshop", desc: "Students learning from visiting International Masters." },
+    { id: 3, src: "/v2.jpeg", category: "academy", title: "The Strategy Room", desc: "Our premium training center layout." },
+    { id: 4, src: "/14.jpg", category: "students", title: "Future Grandmasters", desc: "Junior batch during a weekend blitz session." },
+    { id: 5, src: "/v1.jpeg", category: "tournaments", title: "Regional Finals", desc: "U-14 state championship highlights." },
+    { id: 6, src: "/16.jpg", category: "achievements", title: "Wall of Fame", desc: "Celebrating 200+ wins this calendar year." },
+    { id: 7, src: "/v4.jpeg", category: "academy", title: "Digital Analysis", desc: "Using AI tools to analyze student games." },
+    { id: 8, src: "/18.jpg", category: "students", title: "Summer Camp 2024", desc: "Annual gathering of the Guru Chess family." },
+    { id: 9, src: "/19.jpg", category: "tournaments", title: "Blitz Marathon", desc: "Speed chess tournament under the lights." },
+    { id: 10, src: "/20.jpg", category: "tournaments", title: "Regional Finals", desc: "U-14 state championship highlights." },
+    { id: 11, src: "/21.jpg", category: "achievements", title: "Wall of Fame", desc: "Celebrating 200+ wins this calendar year." },
+    { id: 12, src: "/11.jpg", category: "academy", title: "Digital Analysis", desc: "Using AI tools to analyze student games." },
+    { id: 13, src: "/15.jpg", category: "students", title: "Summer Camp 2024", desc: "Annual gathering of the Guru Chess family." },
+    { id: 14, src: "/13.jpg", category: "tournaments", title: "Blitz Marathon", desc: "Speed chess tournament under the lights." },
+    { id: 15, src: "/v3.jpeg", category: "tournaments", title: "Regional Finals", desc: "U-14 state championship highlights." },
+    { id: 16, src: "/v4.jpeg", category: "achievements", title: "Wall of Fame", desc: "Celebrating 200+ wins this calendar year." },
+    { id: 17, src: "/17.jpg", category: "academy", title: "Digital Analysis", desc: "Using AI tools to analyze student games." },
+    { id: 18, src: "/v5.jpeg", category: "students", title: "Summer Camp 2024", desc: "Annual gathering of the Guru Chess family." },
+    { id: 20, src: "/pri2.jpg", category: "tournaments", title: "National Open 2024", desc: "Advanced tactical battle in the final rounds." },
+    { id: 21, src: "/pri3.jpg", category: "tournaments", title: "National Open 2024", desc: "Advanced tactical battle in the final rounds." },
   ]
 
   const filters = [
@@ -85,17 +97,10 @@ export default function GalleryPage() {
                   className="group relative cursor-zoom-in"
                 >
                   <Card className="overflow-hidden rounded-[2rem] border-0 shadow-sm transition-all duration-500 hover:shadow-2xl">
-                    <div className="aspect-[4/5] relative">
+                    <div className="aspect-[6/5] relative">
                       <img src={image.src} alt={image.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                       
-                      {/* Hover Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-8 flex flex-col justify-end">
-                        <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                          <span className="text-[10px] font-black text-white/60 uppercase tracking-[0.3em]" style={{ color: brandOrange }}>{image.category}</span>
-                          <h3 className="text-white text-2xl font-serif italic mb-2">{image.title}</h3>
-                          <p className="text-white/70 text-xs leading-relaxed">{image.desc}</p>
-                        </div>
-                      </div>
+                     
                     </div>
                   </Card>
                 </motion.div>

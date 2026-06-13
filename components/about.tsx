@@ -11,13 +11,13 @@ export function AboutUsSection() {
 
   // Placeholder images for the curved carousel
   const coaches = [
-    { img: "/1.jpg" },
-    { img: "/2.jpg" },
-    { img: "/3.jpeg" },
-    { img: "/6.webp" },
-    { img: "/5.avif" },
-    { img: "/4.jpg" },
-    { img: "/7.jpg" },
+    { img: "/16.jpg" },
+    { img: "/17.jpg" },
+    { img: "/v1.jpeg" },
+    { img: "/pri1.jpg" },
+    { img: "/g1.jpeg" },
+    { img: "/18.jpg" },
+    { img: "/19.jpg" },
   ]
 
   return (
@@ -47,7 +47,7 @@ export function AboutUsSection() {
   <Button 
     className="rounded-full px-8 py-6 text-sm font-black bg-black hover:bg-black/80 text-white flex items-center gap-2 mx-auto uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl"
   >
-    Get started for Free <ChevronRight size={18} />
+    Get started for <ChevronRight size={18} />
   </Button>
 </Link>
           </div>

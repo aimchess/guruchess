@@ -63,7 +63,7 @@ export function ContactHero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-base md:text-xl text-white/60 max-w-2xl mx-auto font-medium leading-relaxed"
         >
-          Have questions about enrollment, batches, or a free evaluation? 
+          Have questions about enrollment, batches, or a evaluation? 
           Our expert counselors are ready to guide you.
         </motion.p>
 

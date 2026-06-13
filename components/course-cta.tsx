@@ -54,7 +54,7 @@ export function DottedCTA() {
               </h2>
               
               <p className="text-blue-100/70 text-sm font-medium">
-                Not sure where to start? Take a free assessment with our senior coaches.
+                Not sure where to start? Take a assessment with our senior coaches.
               </p>
             </div>
 

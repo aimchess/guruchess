@@ -256,7 +256,7 @@ export default function OnlineTrainingPage() {
              <div className="inline-block bg-[#F0F4F8] text-[#2B5292] px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">Experience It First</div>
              <h3 className="text-3xl font-black uppercase italic tracking-tighter mb-6">The 30-Minute <span className="text-[#C2410C]">Demo Class</span></h3>
              <p className="text-gray-400 font-bold uppercase text-[10px] tracking-widest leading-loose mb-8">
-               Our free online demo allows you to test your internet connection, meet a coach, and see our digital board tools in action before committing to a full program.
+               Our online demo allows you to test your internet connection, meet a coach, and see our digital board tools in action before committing to a full program.
              </p>
              <ul className="space-y-4 mb-10">
                 {["Connection Speed Test", "Personalized Skill Audit", "Curriculum Preview"].map((item, i) => (

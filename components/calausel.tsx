@@ -8,19 +8,19 @@ export function AutoGallery() {
   const brandOrange = "#C2410C"
 
   const row1 = [
-    { type: "Tournament", label: "State Open", img: "/1.jpg" },
-    { type: "Certificate", label: "FIDE Certified", img: "/2.jpg" },
-    { type: "Medal", label: "Victory Moment", img: "/3.jpeg" },
-    { type: "Tournament", label: "Blitz Masters", img: "/4.jpg" },
-    { type: "Medal", label: "National Gold", img: "/5.avif" },
+    { type: "Tournament", label: "State Open", img: "/pri1.jpg" },
+    { type: "Certificate", label: "FIDE Certified", img: "/g1.jpeg" },
+    { type: "Medal", label: "Victory Moment", img: "/11.jpg" },
+    { type: "Tournament", label: "Blitz Masters", img: "/12.jpg" },
+    { type: "Medal", label: "National Gold", img: "/13.jpg" },
   ]
 
   const row2 = [
-    { type: "Medal", label: "Junior Cup", img: "/6.webp" },
-    { type: "Certificate", label: "Elo Achievement", img: "/7.jpg" },
-    { type: "Tournament", label: "District Open", img: "/ach.jpg" },
-    { type: "Medal", label: "Bronze Finish", img: "/course.jpg" },
-    { type: "Certificate", label: "Academy Merit", img: "/blog.jpeg" },
+    { type: "Medal", label: "Junior Cup", img: "/v3.jpeg" },
+    { type: "Certificate", label: "Elo Achievement", img: "/v4.jpeg" },
+    { type: "Tournament", label: "District Open", img: "/14.jpg" },
+    { type: "Medal", label: "Bronze Finish", img: "/15.jpg" },
+    { type: "Certificate", label: "Academy Merit", img: "/16.jpg" },
   ]
 
   return (
@@ -88,24 +88,8 @@ function GalleryCard({ item, brandBlue }: any) {
         className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" 
         alt="Gallery" 
       />
-      {/* Dynamic Tag Overlay */}
-      <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-lg">
-        <div style={{ color: brandBlue }}>
-           {item.type === "Medal" && <Trophy size={14} />}
-           {item.type === "Certificate" && <Award size={14} />}
-           {item.type === "Tournament" && <Camera size={14} />}
-        </div>
-        <span className="text-[10px] font-black uppercase tracking-widest text-slate-800">{item.label}</span>
-      </div>
       
-      {/* Hover Information Overlay */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 flex items-center justify-center p-8">
-          <div className="text-center translate-y-4 group-hover/card:translate-y-0 transition-transform duration-500">
-             <Star className="text-amber-400 mx-auto mb-4" fill="currentColor" size={24} />
-             <p className="text-white font-black uppercase tracking-widest text-sm italic">{item.type} Winner</p>
-             <p className="text-white/60 text-[10px] font-bold uppercase tracking-[0.2em] mt-2">Guru Chess Academy</p>
-          </div>
-      </div>
+
     </div>
   )
 }
