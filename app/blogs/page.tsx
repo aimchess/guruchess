@@ -3,15 +3,18 @@ import { useState } from "react"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { motion, AnimatePresence } from "framer-motion"
-import { Calendar, Clock, ArrowRight, Filter } from "lucide-react"
+import { Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { BlogHero } from "@/components/blogBanner"
-import { blogs } from "./blog-data"
+import { blogs } from "./blog-data" // Updated path
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("All")
   const categories = ["All", "Tactics", "Parenting", "Psychology", "Academy News"]
-  const filteredBlogs = activeCategory === "All" ? blogs : blogs.filter(b => b.category === activeCategory)
+  
+  const filteredBlogs = activeCategory === "All" 
+    ? blogs 
+    : blogs.filter(b => b.category === activeCategory)
 
   return (
     <div className="min-h-screen bg-[#fcfdff]">
@@ -44,18 +47,28 @@ export default function BlogPage() {
               <motion.div
                 key={blog.id}
                 layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
                 className="group flex flex-col h-full bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all"
               >
-                <Link href={`/blog/${blog.slug}`} className="cursor-pointer">
+                {/* Link uses the slug from blog-data */}
+                <Link href={`/blogs/${blog.slug}`} className="cursor-pointer flex flex-col h-full">
                   <div className="relative aspect-video overflow-hidden">
-                    <img src={blog.image} alt={blog.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <img 
+                      src={blog.image} 
+                      alt={blog.title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    />
                   </div>
-                  <div className="p-8">
-                    <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#2B5292] transition-colors">{blog.title}</h3>
-                    <p className="text-slate-500 text-sm mb-8 line-clamp-2">{blog.excerpt}</p>
-                    <div className="flex items-center justify-between">
+                  <div className="p-8 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#2B5292] transition-colors">
+                      {blog.title}
+                    </h3>
+                    <p className="text-slate-500 text-sm mb-8 line-clamp-2">
+                      {blog.excerpt}
+                    </p>
+                    <div className="mt-auto flex items-center justify-between">
                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
                          <Clock size={14} /> {blog.readTime}
                        </span>
