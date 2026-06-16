@@ -12,7 +12,7 @@ import {
 import Seo from "@/components/Seo";
 import { Footer } from "@/components/footer"
 import FounderSection from "@/components/founder"
-import { Navbar } from "@/components/navbar";
+import Navbar from "@/components/navbar";
 
 /**
  * REUSABLE COMPONENTS
