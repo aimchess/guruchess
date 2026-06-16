@@ -62,28 +62,12 @@ export default function HomePage() {
 
   return (
     <>
-      <Head>
-        <title>Guru Chess Academy | Professional Chess Coaching in Indirapuram</title>
-        <meta
-          name="description"
-          content="Master the mind game at Guru Chess Academy. Expert coaching by International Rated players for beginners, intermediate, and advanced students. Join our Indirapuram hub or online classes."
-        />
-        <meta
-          name="keywords"
-          content="chess academy Ghaziabad, chess coaching Indirapuram, Guru Chess Academy, Pradeep Pathak, learn chess online, Master rated coaches, chess for kids"
-        />
-        <meta name="author" content="Guru Chess Academy" />
-        <meta name="robots" content="index, follow" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Guru Chess Academy | World-Class Strategic Training" />
-        <meta property="og:description" content="Transform from a beginner to a tactical master with Guru Chess Academy. Specialized FIDE-aligned curriculum." />
-        <meta property="og:image" content="/guru-logo.jpeg" />
-        <meta property="og:url" content="https://www.guruchessacademy.com" />
-        <meta property="og:type" content="website" />
-        
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      </Head>
+      <Seo
+        title="Guru Chess Academy | Professional Chess Coaching in Indirapuram"
+        description="Master the mind game at Guru Chess Academy. Expert coaching by International Rated players for beginners, intermediate, and advanced students. Join our Indirapuram hub or online classes."
+        keywords="chess academy Ghaziabad, chess coaching Indirapuram, Guru Chess Academy, Pradeep Pathak, learn chess online, Master rated coaches, chess for kids"
+        structuredData={structuredData}
+      />
 
       <div className="min-h-screen bg-white">
         <header>

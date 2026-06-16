@@ -9,7 +9,7 @@ import {
   Sparkles, Coffee, Microscope, MessageSquare,
   ChevronRight, Calendar, MapPin
 } from "lucide-react"
-import { Navbar } from "@/components/navbar"
+import Seo from "@/components/Seo";
 import { Footer } from "@/components/footer"
 import FounderSection from "@/components/founder"
 
@@ -122,6 +122,15 @@ export default function CoachingPage() {
   ]
 
   return (
+    <>
+      <Seo
+        title="Coaching Programs | Guru Chess Academy"
+        description="Professional chess coaching for kids, adults, and international students. Join our tailored programs."
+        keywords="online chess coaching, kids chess coaching, adult chess training, international chess coaching, FIDE instructor"
+        structuredData={coachingStructuredData}
+      />
+      <div className="bg-white min-h-screen selection:bg-[#C2410C] selection:text-white">
+
     <div className="bg-white min-h-screen selection:bg-[#C2410C] selection:text-white">
       <Navbar />
 

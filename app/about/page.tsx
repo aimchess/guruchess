@@ -15,23 +15,46 @@ import { Testimonials } from "@/components/review"
 import CoachSection from "@/components/founder"
 import { FounderSection } from "@/components/anu"
 import DeepakKatiyarProfile from "@/components/deepak"
+import Seo from "@/components/Seo"
 
 export default function AboutPage() {
-  return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
-      <Navbar />
-      <AboutHero/>
-      <AboutUsSection/>
-      <FounderSection/>
-      <CoachSection/>
-      <DeepakKatiyarProfile/>
-      <MissionVision/>
-      <WhyDifferent/>
-      <Testimonials/>
-      <CallToAction/>
+  const coachData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "CM Shailendra Bajpai",
+    jobTitle: "FIDE Instructor",
+    affiliation: {
+      "@type": "Organization",
+      name: "Guru Chess Academy",
+    },
+    sameAs: [
+      "https://www.facebook.com/share/1CrebozWXz/",
+      "https://www.instagram.com/guruchessacademy2025",
+      "https://youtube.com/@guruchessacademy",
+    ],
+  };
 
-  
-      <Footer/>
-    </div>
+  return (
+    <>
+      <Seo
+        title="About Coach – CM Shailendra Bajpai | Guru Chess Academy"
+        description="Learn from CM Shailendra Bajpai, a certified FIDE Instructor and Candidate Master, leading Guru Chess Academy."
+        keywords="CM Shailendra Bajpai, FIDE Instructor India, Candidate Master Chess Coach, Guru Chess Academy"
+        structuredData={coachData}
+      />
+      <div className="min-h-screen bg-white overflow-x-hidden">
+        <Navbar />
+        <AboutHero />
+        <AboutUsSection />
+        <FounderSection />
+        <CoachSection />
+        <DeepakKatiyarProfile />
+        <MissionVision />
+        <WhyDifferent />
+        <Testimonials />
+        <CallToAction />
+        <Footer />
+      </div>
+    </>
   )
 }
