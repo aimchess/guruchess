@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { Play, MessageCircle } from "lucide-react"
 
 // Component Imports
-import { Navbar } from "@/components/navbar"
+import Navbar from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/service"
 import { WhyChooseUs } from "@/components/why-us"
@@ -17,6 +17,7 @@ import { FAQ } from "@/components/faq"
 import { CallToAction } from "@/components/cta"
 import { Footer } from "@/components/footer"
 import { ChessInSchools } from "@/components/chessinschool"
+import Seo from "@/components/Seo";
 
 export default function HomePage() {
   const [isVideoOpen, setIsVideoOpen] = useState(false)

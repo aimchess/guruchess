@@ -1,27 +1,27 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
+import Head from "next/head";
 
 interface SeoProps {
   title?: string;
   description?: string;
   keywords?: string;
   structuredData?: object;
+  canonical?: string;
 }
 
-export default function Seo({ title, description, keywords, structuredData }: SeoProps) {
-  const { asPath } = useRouter();
-  const canonical = `https://www.guruchessacademy.com${asPath}`;
+export default function Seo({ title, description, keywords, structuredData, canonical }: SeoProps) {
+  const defaultCanonical = "https://www.guruchessacademy.com";
+  const finalCanonical = canonical ?? defaultCanonical;
 
   return (
     <Head>
       {title && <title>{title} | Guru Chess Academy</title>}
       {description && <meta name="description" content={description} />}
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={canonical} />
+      <link rel="canonical" href={finalCanonical} />
       {/* Open Graph */}
       {title && <meta property="og:title" content={title} />}
       {description && <meta property="og:description" content={description} />}
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content={finalCanonical} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/guru-logo.jpeg" />
       {/* Twitter Card */}
