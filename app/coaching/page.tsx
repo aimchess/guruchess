@@ -13,6 +13,7 @@ import Seo from "@/components/Seo";
 import { Footer } from "@/components/footer"
 import FounderSection from "@/components/founder"
 import { brandBlue } from "@/app/constants";
+import Navbar from "@/components/navbar";
 
 /**
  * REUSABLE COMPONENTS
