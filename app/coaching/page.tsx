@@ -131,7 +131,7 @@ export default function CoachingPage() {
       />
       <div className="bg-white min-h-screen selection:bg-[#C2410C] selection:text-white">
 
-    <div className="bg-white min-h-screen selection:bg-[#C2410C] selection:text-white">
+    
       <Navbar />
 
       {/* SECTION 1: HERO */}
