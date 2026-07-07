@@ -7,6 +7,7 @@ import * as z from "zod";
 import { Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -94,6 +95,7 @@ const sourceList = [
 
 export function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
   const scriptUrl = "https://script.google.com/macros/s/AKfycbxnzPcnPxBlH_T0mYIZAqoUjWDGbzDxJTlKOBNnAexjqHT1lpoGi9p1x6cWCEURmPO2XA/exec";
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -168,6 +170,7 @@ export function RegistrationForm() {
       // With no-cors, we cannot read the response body, so we assume success if fetch resolves
       toast.success("Thank you for registering with Guru Chess Academy! We have received your information and will contact you shortly regarding your classes.", { duration: 8000 });
       form.reset();
+      router.push("/thank-you");
       
     } catch (error) {
       console.error(error);
@@ -182,7 +185,7 @@ export function RegistrationForm() {
       <div className="mb-8 text-center space-y-4">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Welcome to Guru Chess Academy!</h1>
         <p className="text-slate-600 dark:text-slate-400">
-          Please fill out this registration form carefully. The information you provide will help us schedule your classes and maintain your student records.
+          Please fill out this registration form carefully. The information you provide will help us schedule your classes and maintain our student records.
         </p>
         <p className="text-sm text-slate-500 dark:text-slate-500">
           Fields marked Optional, If you have, or If any may be left blank if they do not apply.
@@ -243,6 +246,9 @@ export function RegistrationForm() {
                         disabled={(date) =>
                           date > new Date() || date < new Date("1900-01-01")
                         }
+                        captionLayout="dropdown"
+                        startMonth={new Date(1900, 0)}
+                        endMonth={new Date()}
                         initialFocus
                       />
                     </PopoverContent>
