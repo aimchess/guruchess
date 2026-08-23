@@ -21,6 +21,7 @@ export function Navbar() {
     { href: "/courses", label: "Courses" },
     { href: "/coaches", label: "Coaches" },
     { href: "/achievements", label: "Achievements" },
+    { href: "/reviews", label: "Reviews" },
     { href: "/gallery", label: "Gallery" },
     { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact Us" },

@@ -1,14 +1,32 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Star, Quote } from "lucide-react"
+import { Star, Quote, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export function Testimonials() {
   const brandBlue = "#2B5292"
   const brandOrange = "#C2410C"
 
   const reviews = [
-    
+    {
+      name: "Preeyansh Roul",
+      role: "Student (1700 to 2000 FIDE)",
+      text: "I've gone from 1700 to 2000 FIDE. The biggest change has been in my positional understanding and opening depth, letting me beat a 2370 FM twice in classical chess!",
+      rating: 5,
+    },
+    {
+      name: "Prisha",
+      role: "Student (Irish U16 Girls Champion)",
+      text: "Sir's coaching helped me win the women's challenger section, represent Ireland at World Youth, and win 1st place in U16 National Irish girls championship!",
+      rating: 5,
+    },
+    {
+      name: "Vihaan's Parent",
+      role: "Parent (Beginner to 1700+ FIDE)",
+      text: "Vihaan grew tremendously from beginner to 1700+ FIDE rated. Under sir's guidance, he achieved multiple championships (Delhi/UP State, CBSE gold medals).",
+      rating: 5,
+    },
     {
       name: "Ramesh Palankar",
       role: "Parent",
@@ -111,6 +129,20 @@ export function Testimonials() {
               />
             </motion.div>
           ))}
+        </div>
+
+        {/* VIEW ALL CTA BUTTON */}
+        <div className="mt-16 text-center">
+          <Link href="/reviews">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 bg-[#2B5292] text-white hover:bg-[#1a3b70] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-xl shadow-lg transition-all active:scale-95"
+            >
+              <span>View All Full Reviews</span>
+              <ChevronRight size={14} />
+            </motion.button>
+          </Link>
         </div>
 
         {/* TRUST BADGE */}
