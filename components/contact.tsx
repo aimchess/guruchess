@@ -18,7 +18,7 @@ import emailjs from '@emailjs/browser'
 export function ContactSection() {
   const brandBlue = "#2B5292"
   const brandOrange = "#C2410C"
-  const adminWhatsApp = "919911289767"
+  const adminWhatsApp = "919971809248"
 
   // Form State
   const [loading, setLoading] = useState(false)
@@ -75,7 +75,7 @@ export function ContactSection() {
   }
 
   const contactDetails = [
-    { icon: <Phone size={20} />, title: "General Line", value: "+91 99112 89767" },
+    { icon: <Phone size={20} />, title: "General Line", value: "+91  99718 09248" },
     { icon: <Mail size={20} />, title: "Email Queries", value: "guruchessacademy@gmail.com" },
     { icon: <Clock size={20} />, title: "Timing", value: "Mon-Sun: 10AM - 07PM" }
   ]
