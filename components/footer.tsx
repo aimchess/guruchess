@@ -168,7 +168,7 @@ export function Footer() {
                   
                   <div className="flex items-center gap-3">
                     <Phone size={16} style={{ color: brandOrange }} />
-                    <span className="text-[14px] font-black tracking-tighter text-white">+91 99112 89767</span>
+                    <span className="text-[14px] font-black tracking-tighter text-white">+91 99718 09248</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock size={16} style={{ color: brandOrange }} />
@@ -176,7 +176,7 @@ export function Footer() {
                   </div>
 
                   <Button asChild className="w-full h-12 rounded-xl font-black text-xs uppercase tracking-widest shadow-xl hover:scale-[1.02] transition-all bg-[#25D366] border-none mt-2">
-                    <a href="https://wa.me/919911289767" target="_blank">
+                    <a href="https://wa.me/919971809248" target="_blank">
                       <MessageCircle className="w-4 h-4 mr-2 fill-current" />
                       Chat on WhatsApp
                     </a>
